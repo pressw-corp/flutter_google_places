@@ -222,9 +222,10 @@ class LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
     Widget child = Row(
       children: <Widget>[
         widget.leading ?? const SizedBox(),
-        const SizedBox(
-          width: 16.0,
-        ),
+        if (widget.leading != null)
+          const SizedBox(
+            width: 16.0,
+          ),
         Expanded(
           child: text,
         ),
