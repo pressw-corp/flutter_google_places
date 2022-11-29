@@ -59,6 +59,7 @@ class PlacesAutocompleteField extends StatefulWidget {
     this.overlayBorderRadius,
     this.textStyle,
     this.textStyleFormField,
+    this.logo,
   }) : super(key: key);
 
   /// Controls the text being edited.
@@ -77,6 +78,9 @@ class PlacesAutocompleteField extends StatefulWidget {
 
   /// Text that is shown, when no input was done, yet.
   final String hint;
+
+  /// Logo to be shown for attribution.
+  final Widget? logo;
 
   /// Your Google Maps Places API Key.
   ///
@@ -188,6 +192,7 @@ class LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
         strictbounds: widget.strictbounds,
         overlayBorderRadius: widget.overlayBorderRadius,
         textStyle: widget.textStyle,
+        logo: widget.logo,
       );
 
   Future<void> _handleTap() async {
